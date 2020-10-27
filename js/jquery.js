@@ -82,12 +82,12 @@ $(document).ready(function(){
 
     function Hidepwd(){
         if(eyeflag == false){
-            $(password).type = "text";
+            $(password).attr("type", "text");
             $(eye).val("⊝");
             eyeflag = true;
         }
         else{
-            $(password).type = "password";
+            $(password).attr("type", "password");
             $(eye).val("⊙");
             eyeflag = false;
         }
