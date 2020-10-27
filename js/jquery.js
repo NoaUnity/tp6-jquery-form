@@ -37,6 +37,8 @@ $(document).ready(function(){
 
     //#endregion
 
+    //#region Fonctions
+
     function verifPseudo (nom){
         if(3 <= nom.val().length && nom.val().length <= 10){
             $(pseudoResult).text("pseudo valide");
@@ -93,7 +95,25 @@ $(document).ready(function(){
         }
     }
 
-    
+    function ajaxPutInJson(){
+        $.ajax({
+            url: "",
+            method: "PUT",
+            dataType: "json",
+            data: {pseudo: pseudo, email: email},
+            success: function(){
+                alert("Requested !")
+            },
+            error: function(jqXHR, statusText, error){
+                console.log("error: ", error);
+                console.log(statusText);
+            }
+        })
+    }
+
+    //#endregion
+
+    //#region MAIN
 
     valider.click(function(){
         verifPseudo($(pseudo));
@@ -103,10 +123,17 @@ $(document).ready(function(){
         $(boxResult).show();
         verifFlags(flag1,flag2,flag3);
 
+        ajaxPutInJson();
+
     })
 
     eye.click(function(){
         Hidepwd();
     })
+
+    //#endregion
+
+
+
 
 })
