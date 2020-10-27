@@ -1,0 +1,22 @@
+#container{
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: grey;
+}
+#btnValid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#valider{
+    margin-right: 10px;
+}
+ #resultats{
+    display: none;
+    font-size: 20px;
+}
+

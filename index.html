@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <h1>⚔ Formulaire d'inscription ⚔</h1>
+        <p>
+          <label for="pseudo">Pseudo</label> :
+          <input type="text" name="pseudo" id="pseudo"/>
+          (entrez entre 3 et 10 caractères)
+          <span id="aidePseudo"></span>
+        </p>
+        <p>
+          <label for="mdp">Mot de passe</label> :
+          <input type="password" name="mdp" id="mdp" />
+          <input type="button" value="⊙" id="eyebutton" />
+          (entrez au moins 5 caractères)
+          <span id="aideMdp"></span>
+        </p>
+        <p>
+          <label for="courriel">Courriel</label> :
+          <input
+            type="email"
+            name="courriel"
+            id="courriel"
+            placeholder="utilisateur@domaine.fr"
+          />
+          (format : utilisateur@domaine.fr)
+          <span id="aideCourriel"></span>
+        </p>
+        <div id="btnValid">
+        <input type="button" value="Envoyer" id="valider"/>
+        <input type="reset" value="Annuler" />
+        </div>
+        <br>
+        <br>
+        <div id="resultats">
+            <div id="pseudoResult">
+                pseudo valide
+            </div>
+            <div id="mdpResult">
+                mot de passe valide
+            </div>
+            <div id="mailResult">
+                mail valide
+            </div>
+          </div>
+      </form>
+
+
+
+    </div>
+  </body>
+</html>
